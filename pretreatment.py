@@ -15,6 +15,7 @@ import json
 import base64
 
 PATH = 'imgs'
+count = 200  # 用于训练的图片数量，可以设置得更大一些，比如 50000。
 
 
 def download_image():
@@ -30,7 +31,7 @@ def download_image():
 
 
 def download_images():
-    for idx in range(300):
+    for idx in range(count):
         download_image()
         print(idx)
 
@@ -75,7 +76,7 @@ def get_imgs(img):
 
 def pretreat():
     pathlib.Path(PATH).mkdir(exist_ok=True)
-    if len(os.listdir(PATH)) < 300:
+    if len(os.listdir(PATH)) < count:  #此处与上文的设置相同
         download_images()
     texts, imgs = [], []
     for img in os.listdir(PATH):

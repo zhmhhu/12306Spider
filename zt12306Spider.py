@@ -84,6 +84,6 @@ class Zt12306Spider:
 
 
 if __name__ == '__main__':
-    username = 'alex603'
-    password = 'zhaomin12306'
+    username = 'username'
+    password = 'password'ß
     Zt12306Spider(username, password)
