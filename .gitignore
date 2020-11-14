@@ -53,11 +53,5 @@ docs/_build/
 # PyBuilder
 target/
 
-*.jpg
-*.png
-*.npy
-*.log
-*.npz
-*.pkl
-*.h5
+
 .idea
